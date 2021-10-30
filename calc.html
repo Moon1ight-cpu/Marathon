@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let Num1 = +prompt('Введите первое число'), // Объявление 3 переменных , для будущих математических операций) 
+            Num2 = +prompt('Введите второе число'),// унарный + перед prompt сразу переводит строку в число
+
+
+        function Calc(Num1, Num2, operator) {
+            let Num1 = +prompt('Введите первое число'), // Объявление 3 переменных , для математических операций) 
+                Num2 = +prompt('Введите второе число'), // унарный + перед prompt сразу переводит строку в число
+                operator = prompt('Введите оператор: +(сложение), -(вычитание), *(умножение),/(деление),**(возведение в степень)');
+
+            if ((Num1 == '') || (Num2 == '') || (operator == '')) { //  3 условия это проверка на то чтобы вместо  одного  из операторов не ввели пустую строку. 
+                alert('Error');
+            } else if (operator == '+') {
+                alert(Num1 + Num2);
+            } else if (operator == '-') {
+                alert(Num1 - Num2);
+            } else if (operator == '/') {
+                alert(Num1 / Num2);
+            } else if (operator == '*') {
+                alert(Num1 * Num2);
+            } else if (operator == '**') {
+                alert(Num1 ** Num2);
+            } else { // если вместо оператора ввели что-то другое
+                alert('unknown operation')
+            }
+        }
+
+        Calc(Num1, Num2, operator);
+
+    </script>
+
+
+</body>
+
+</html>`
