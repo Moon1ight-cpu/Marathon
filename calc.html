@@ -16,28 +16,41 @@
             operator;
 
         function Calc(Num1, Num2, operator) {
-
-            Num1 = +prompt('Введите первое число');
-            while (Num1 / 1 != Num1) { // Проверка, если было введенно что-то кроме чисел, то выдаст ошибку и попросит ввести число. 
-                alert('Ошибка, введенное значение не явялется числом, введите численное значение');
-                Num1 = +prompt('Введите первое число');
+            Num1 = prompt('Введите первое число');
+            if (Num1 == '') { // проверка, является ли Num1 пустрой строкой
+                alert('Error');
+                return;
             }
-
-            Num2 = +prompt('Введите второе число');
-            while (Num2 / 1 != Num2) {
-                alert('Ошибка, введенное значение не явялется числом, введите численное значение');
-                Num2 = +prompt('Введите второе число');
+            if (Num1 / 1 != Num1) {  // проверка, является ли Num1 не числом
+                alert('Error');
+                return;
             }
+            Num1 = +Num1;
+
+            Num2 = prompt('Введите второе число');
+            if (Num2 == '') {  // проверка, является ли Num2 пустрой строкой
+                alert('Error');
+                return;
+            }
+            if (Num2 / 1 != Num2) { // проверка, является ли Num2 не числом
+                alert('Error');
+                return;
+            }
+            Num2 = +Num2;
 
             operator = prompt('Введите оператор: + , - , * , / , **');
 
-            if ((Num1 == '') || (Num2 == '') || (operator == '')) { //  3 условия это проверка на то чтобы вместо  одного  из операторов не ввели пустую строку. 
+            if (operator == '') { //   проверка является ли operator пустой строкой
                 alert('Error');
             } else if (operator == '+') {
                 alert(Num1 + Num2);
             } else if (operator == '-') {
                 alert(Num1 - Num2);
             } else if (operator == '/') {
+                if (Num2 === 0) {
+                    alert('На ноль делить нельзя');
+                    return;
+                }
                 alert(Num1 / Num2);
             } else if (operator == '*') {
                 alert(Num1 * Num2);
