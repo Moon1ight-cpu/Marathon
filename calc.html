@@ -40,25 +40,41 @@
 
             operator = prompt('Введите оператор: + , - , * , / , **');
 
-            if (operator == '') { //   проверка является ли operator пустой строкой
-                alert('Error');
-            } else if (operator == '+') {
-                alert(Num1 + Num2);
-            } else if (operator == '-') {
-                alert(Num1 - Num2);
-            } else if (operator == '/') {
-                if (Num2 === 0) {
-                    alert('На ноль делить нельзя');
-                    return;
-                }
-                alert(Num1 / Num2);
-            } else if (operator == '*') {
-                alert(Num1 * Num2);
-            } else if (operator == '**') {
-                alert(Num1 ** Num2);
-            } else { // если вместо оператора ввели что-то другое
-                alert('unknown operation')
+            switch (operator) {
+                case (''):
+                    alert('Error');
+                    break;
+
+                case ('+'):
+                    alert(Num1 + Num2);
+                    break;
+
+                case ('-'):
+                    alert(Num1 - Num2);
+                    break;
+
+                case ('*'):
+                    alert(Num1 * Num2);
+                    break;
+
+                case ('**'):
+                    alert(Num1 ** Num2);
+                    break;
+
+                case ('/'):
+                    if (Num2 === 0) {
+                        alert('На ноль делить нельзя');
+                        break;
+                    }
+                    alert(Num1 / Num2);
+                    break;
+
+                default:
+                    alert('unknown operation');
+                    break;
             }
+
+
         }
 
         Calc(Num1, Num2, operator);
