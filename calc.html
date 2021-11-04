@@ -13,7 +13,8 @@
     <script>
         let Num1, // Объявление 3 переменных , для математических операций) 
             Num2,
-            operator;
+            operator,
+            result;
 
         function Calc(Num1, Num2, operator) {
             Num1 = prompt('Введите первое число');
@@ -38,43 +39,22 @@
             }
             Num2 = +Num2;
 
-            operator = prompt('Введите оператор: + , - , * , / , **');
+            operator = prompt('Введите оператор: "sum", "sub", "mult" ,"div" ');
 
-            switch (operator) {
-                case (''):
-                    alert('Error');
-                    break;
-
-                case ('+'):
-                    alert(Num1 + Num2);
-                    break;
-
-                case ('-'):
-                    alert(Num1 - Num2);
-                    break;
-
-                case ('*'):
-                    alert(Num1 * Num2);
-                    break;
-
-                case ('**'):
-                    alert(Num1 ** Num2);
-                    break;
-
-                case ('/'):
-                    if (Num2 === 0) {
-                        alert('На ноль делить нельзя');
-                        break;
-                    }
-                    alert(Num1 / Num2);
-                    break;
-
-                default:
-                    alert('unknown operation');
-                    break;
+            if (Num2 === 0 && operator == 'div') { // проверка, деление на 0 
+                alert('На ноль делить нельзя');
+                return;
             }
 
+            let operations = {
+                sum: Num1 + Num2,
+                sub: Num1 - Num2,
+                mult: Num1 * Num2,
+                div: Num1 / Num2,
+            }
 
+            result = operations[operator];
+            alert(result);
         }
 
         Calc(Num1, Num2, operator);
