@@ -1,30 +1,15 @@
-
-// Функция showList будет выводить весь список дел в виде 
-
-// Todo: 
-//  "create a task",
-//  "make a bed",
-// In Progress: 
-//  "write a post"
-// Done:
-//  -
-
-// Создайте список дел, добавьте в него пару задач, поменяйте их статусы несколько раз и выведете результат в консоль
-
-
 const list = {
     'create a task': 'In Progress',
-
-    'write a post': 'To Do',
+    'write a post': 'Done',
     'что угодно': 'To Do',
 };
-function changeStatus(task, taskCondition) {
+function changeStatus(task, taskCondition) { // изменяет статус
     list[task] = taskCondition;
 }
-function addTask(newTask) {
+function addTask(newTask) { // добавляет новую задачу
     list[newTask] = 'To Do';
 }
-function deleteTask(needToDelete) {
+function deleteTask(needToDelete) { //удаляет задачу
     delete list[needToDelete];
 }
 let count = 0; // счётчик 
