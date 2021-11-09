@@ -8,14 +8,11 @@ function showVerticalMessage(string) {
         for (let i = 0; i < 10; i++) {
             console.log(string[i]) + '/n';
         }
+        return;
     }
-    else {
-        for (let i = 0; i < string.length; i++) {
-            console.log(string[i]) + '/n';
-        }
-
+    for (let i = 0; i < string.length; i++) {
+        console.log(string[i]) + '/n';
     }
-
 }
 showVerticalMessage('марафон');
 showVerticalMessage('Не марафон, а марафонище');
