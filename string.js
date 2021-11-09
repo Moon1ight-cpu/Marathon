@@ -3,14 +3,8 @@ function showVerticalMessage(string) {
     if (string[0] == 'м') {
         string = 'M' + string.slice(1);
     }
-
-    if (string.length > 10) {
-        for (let i = 0; i < 10; i++) {
-            console.log(string[i]);
-        }
-        return;
-    }
-    for (let i = 0; i < string.length; i++) {
+    let more = string.length > 10 ? 10 : string.length;
+    for (let i = 0; i < more; i++) {
         console.log(string[i]);
     }
 }
