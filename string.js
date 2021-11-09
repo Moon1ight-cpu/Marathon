@@ -1,5 +1,4 @@
 function showVerticalMessage(string) {
-
     if (string[0] == 'м') {
         string = 'M' + string.slice(1);
     }
