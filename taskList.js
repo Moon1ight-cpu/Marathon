@@ -1,60 +1,88 @@
-const list = {
-    "create a task": "In Progress",
-    "make a bed": "Done",
-    "write a post": "To Do",
-};
+const LOW_PRIORITY = 'low',
+    MEDIUM_PRIORITY = 'medium',
+    HIGH_PRIORITY = 'high',
+    PRIORITYS = [LOW_PRIORITY, MEDIUM_PRIORITY, HIGH_PRIORITY];
 
-function changeStatus(task, taskCondition) { // изменяет статус
-    list[task] = taskCondition;
+const DO_STATUS = 'To Do',
+    PROGRESS_STATUS = 'In Progress',
+    DONE_STATUS = 'Done',
+    STATUSES = [DO_STATUS, PROGRESS_STATUS, DONE_STATUS];
+
+const list = [
+    {
+        id: 1,
+        name: 'play the balalaika ',
+        status: DO_STATUS,
+        priority: MEDIUM_PRIORITY,
+    },
+    {
+        id: 2,
+        name: 'fight a bear ',
+        status: DO_STATUS,
+        priority: MEDIUM_PRIORITY,
+    },
+    {
+        id: 3,
+        name: 'buy a vodka',
+        status: DONE_STATUS,
+        priority: HIGH_PRIORITY,
+    },
+]
+
+function changeStatus(taskName, newStatus) {
+    let task = list.find(item => item.name == taskName);
+    task.status = newStatus;
 }
 
-function addTask(newTask) { // добавляет новую задачу
-    list[newTask] = 'To Do';
+function deleteTask(removableTask) {
+    let index = list.indexOf(removableTask);
+    list.splice(index, 1);
 }
 
-function deleteTask(needToDelete) { //удаляет задачу
-    delete list[needToDelete];
+function addTask(taskName, taskPriority = LOW_PRIORITY) {
+    let template = {
+        id: list.length + 1,
+        name: taskName,
+        status: DO_STATUS,
+        priority: taskPriority,
+    }
+    list.push(template);
 }
 
-let count = 0; // счётчик 
-
-function showList(listName) { //выводит все ключи по 3м состояниям :  To Do , In Progress, Done 
-
-    console.log('To Do:');
-    for (let prop in listName) {
-        if (listName[prop] === 'To Do') { //выведение To Do
-            console.log(' ' + prop);
-            count++;
-        }
-    }
-    if (count === 0) {
-        console.log('-');
-    }
-    count = 0;
-
-
-    console.log('In Progress:');
-    for (let prop in listName) {
-        if (listName[prop] === 'In Progress') { //выведение In Progress
-            console.log(' ' + prop);
-            count++;
-        }
-    }
-    if (count === 0) {
-        console.log('-');
-    }
-    count = 0;
-
-
-    console.log('Done:');
-    for (let prop in listName) {
-        if (listName[prop] === 'Done') { //выведение Done
-            console.log(' ' + prop);
-            count++;
-        }
-    }
-    if (count === 0) {
-        console.log('-');
+function showBy(parameter) { // 'status' or 'priority'
+    switch (parameter) {
+        case 'priority':
+            for (let key in PRIORITYS) {
+                console.log(`${PRIORITYS[key]}:`);
+                let needablePriority = list.filter(item => item.priority == PRIORITYS[key]);
+                if (needablePriority.length == 0) {
+                    console.log('-');
+                }
+                else {
+                    for (let j of needablePriority) {
+                        console.log(`  ${j.name}`);
+                    }
+                }
+            }
+            console.log('------------------');
+            break;
+        case 'status':
+            for (let key in STATUSES) {
+                console.log(`${STATUSES[key]}:`);
+                let needableStatus = list.filter(item => item.status == STATUSES[key]);
+                if (needableStatus.length == 0) {
+                    console.log('-');
+                }
+                else {
+                    for (let i of needableStatus) {
+                        console.log(`  ${i.name}`);
+                    }
+                }
+            }
+            console.log('------------------');
+            break;
     }
 }
-showList(list);
+
+showBy('priority');
+showBy('status');
