@@ -55,7 +55,7 @@ function showBy(parameter) { // 'status' or 'priority'
             for (let key in PRIORITYS) {
                 console.log(`${PRIORITYS[key]}:`);
                 let needablePriority = list.filter(item => item.priority == PRIORITYS[key]);
-                if (needablePriority.length == 0) {
+                if (!needablePriority.length) {
                     console.log('-');
                 }
                 else {
@@ -70,7 +70,7 @@ function showBy(parameter) { // 'status' or 'priority'
             for (let key in STATUSES) {
                 console.log(`${STATUSES[key]}:`);
                 let needableStatus = list.filter(item => item.status == STATUSES[key]);
-                if (needableStatus.length == 0) {
+                if (!needableStatus.length) {
                     console.log('-');
                 }
                 else {
