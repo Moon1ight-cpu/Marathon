@@ -11,13 +11,13 @@ const DO_STATUS = 'To Do',
 const list = [
     {
         id: 1,
-        name: 'play the balalaika ',
+        name: 'play the balalaika',
         status: DO_STATUS,
         priority: MEDIUM_PRIORITY,
     },
     {
         id: 2,
-        name: 'fight a bear ',
+        name: 'fight a bear',
         status: DO_STATUS,
         priority: MEDIUM_PRIORITY,
     },
