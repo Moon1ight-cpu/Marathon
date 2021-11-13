@@ -1,6 +1,6 @@
 function showVerticalMessage(string) {
-    if (string[0] == 'м') {
-        string = 'M' + string.slice(1);
+    if (string.startsWith("м")) {
+        string = string[0].toUpperCase() + string.slice(1);
     }
     let more = string.length > 10 ? 10 : string.length;
     for (let i = 0; i < more; i++) {
