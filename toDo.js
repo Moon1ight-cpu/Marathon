@@ -6,7 +6,7 @@ const PRIORITYS = ['low', 'medium', 'high'],
 const STATUSES = ['To Do', 'In Progress', 'Done'],
     DO_STATUS = STATUSES[0],
     PROGRESS_STATUS = STATUSES[1],
-    DONE_STATUS = STATUSES[02];
+    DONE_STATUS = STATUSES[2];
 
 const list = [
     {

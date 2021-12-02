@@ -1,0 +1,115 @@
+.page-body {
+    font-family:'Roboto',sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+
+    background-color: #E5E5E5;
+}
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+.wrapper {
+    width: 476px;
+    margin: 150px auto 0;
+    padding: 25px 8px 198px;
+    background-color:#FFFFFF;
+}
+.wrapper h2 {
+    font-family:'Roboto',sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 12px 0;
+}
+
+.input-custom {
+    position: relative;
+}
+.input-custom img {
+content: '';
+position: absolute;
+top: 14px;
+right: 13px;
+width: 20px;
+height: 20px;
+background: url(/TODO/img/plus-icon.png);
+cursor: pointer;
+}
+
+input[type='text'] {
+    box-sizing: border-box;
+    border-radius: 6px;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #989898;
+    margin-bottom: 8px;
+
+    font-family: 'Roboto',sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+input::placeholder {
+    font-family: 'Roboto',sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #BBBBBB;
+}
+
+.item {
+    border: 1px solid #989898;
+    box-sizing: border-box;
+    border-radius: 6px;
+    padding: 12px 12px 12px 42px;
+    margin-bottom: 8px;
+
+    display: flex;
+
+}
+.item p {
+    margin: 0;
+    padding: 0;
+}
+
+.item input {
+    align-self: flex-start;
+    margin-right: 12px;
+}
+.item img {
+    cursor: pointer;
+    margin-left: auto;
+}
+.item label {
+    position: relative;
+}
+
+input + label::before {
+content: '';
+width: 21px;
+height: 21px;
+border-radius: 50%;
+border: 1px #998899 solid;
+position: absolute;
+left: -32px;
+top: 0;
+cursor: pointer;
+}
+
+input:checked + label::after {
+content:'';
+width: 15px;
+height: 15px;
+border-radius: 50%;
+background-color: #C4C4C4;
+position: absolute;
+left: -28px;
+top: 4px;
+cursor: pointer;
+}

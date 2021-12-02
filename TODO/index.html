@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body class="page-body">
+    <div class="wrapper">
+
+        <div class="priority-block">
+            <h2>High</h2>
+
+            <div class="input-custom">
+                <input type="text" class="input-high" placeholder="Добавить важных дел">
+                <img src="img/plus-icon.png">
+            </div>
+
+            <div class="item">
+                <input type="checkbox" class="visually-hidden" id='0'>
+                <label for='0'></label>
+                <p>Вот вам и супер интересная тема.
+                    Вы наверняка заметили что ваши файлы с кодом становятся все объемнее, что хочется вынести
+                    некоторые вещи куда-то за пределы основной программы.</p>
+                <img src="img/close-icon.png" width="15px" height="15px" class="close">
+            </div>
+
+            <div class="item">
+                <input type="checkbox" class="visually-hidden" id='1'>
+                <label for='1'></label>
+                <p>Сверстать этот TODO list</p>
+                <img src="img/close-icon.png" width="15px" height="15px" class="close">
+            </div>
+
+            <div class="item">
+                <input type="checkbox" class="visually-hidden" checked id='2'>
+                <label for='2'></label>
+                <p>Начать делать задачу</p>
+                <img src="img/close-icon.png" width="15px" height="15px" class="close">
+            </div>
+
+        </div>
+
+        <div class="priority-block">
+            <h2>Low</h2>
+            <div class="input-custom">
+                <input type="text" class="input-low" placeholder="Добавить">
+                <img src="img/plus-icon.png">
+            </div>
+
+            <div class="item">
+                <input type="checkbox" class="visually-hidden" id='3'>
+                <label for='3'></label>
+                <p>Посмотреть ютубчик</p>
+                <img src="img/close-icon.png" width="15px" height="15px" class="close">
+            </div>
+
+
+            <script type="module" src="js/main.js"></script>
+        </div>
+
+    </div>
+</body>
+
+</html>

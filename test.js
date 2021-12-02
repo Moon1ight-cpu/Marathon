@@ -1,31 +1,27 @@
-/* let user = {
-    name: "Иван",
-    age: 30
-};
+function buildFun(n) {
+    var res = []
 
-let clone = {}; // новый пустой объект
+    for (var i = 0; i < n; i++) {
 
-for (let key in user) {
-    clone[key] = user[key];
+
+        (function () {
+
+            res.push(function (i) {
+
+                return i;
+
+            })
+
+        })(i);
+
+
+
+
+
+
+    }
+
+
+
+    return res
 }
-
-console.log(clone.age);
-
-let clone1 = {};
-Object.assign(clone1, user);
-
-
-console.log(user.age); */
-
-/* let user = {
-    name: 'John',
-    age: 30
-}
-
-user.sayHi = function () {
-    alert("Привет!");
-};
-
-console.log(user.sayHi);
-console.log(user.sayHi());
- */
