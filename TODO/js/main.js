@@ -1,8 +1,4 @@
-let closeButtons = document.querySelectorAll('.close');
-let items = document.querySelectorAll('.item');
-let addButtons = document.querySelectorAll('.input-custom img');
-let inputs = document.querySelectorAll("input[type='text']");
-let priorityBlocks = document.querySelectorAll('.priority-block');
+import { closeButtons, items, addButtons, inputs, priorityBlocks } from './view.js'
 
 function addEvent() {
     for (let i = 0; i < closeButtons.length; i++) {
