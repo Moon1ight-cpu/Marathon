@@ -52,15 +52,15 @@ UI.LIKE_BUTTON.addEventListener('click', function () {
         LI.innerHTML = `<span>${UI.NOW_CITY.textContent}</span>
     <img src="img/close_thick_icon_137749.svg" width="20px" height="20px">`
         LI.querySelector('img').addEventListener('click', deleteFavoriteCity);
-        LI.querySelector('span').addEventListener('click', сlickBookmarksCity);
+        LI.querySelector('span').addEventListener('click', showBookmarkCityWeather);
         UI.FAVORITES.append(LI);
         FAVORITES_CITIES.push(UI.NOW_CITY.textContent);
     }
 });
 
-function сlickBookmarksCity() {
+function showBookmarkCityWeather() {
     showWeather(this.textContent);
 }
 UI.BOOKMARKS.forEach(function (city) {
-    city.addEventListener('click', сlickBookmarksCity);
+    city.addEventListener('click', showBookmarkCityWeather);
 })
