@@ -4,7 +4,7 @@ const UI = {
     NOW_CITY: document.querySelector('.like span'),
     NOW_TEMPERATURE: document.querySelector('.temperature'),
     FAVORITES: document.querySelector('.favorites'),
-    CLOSE_BUTTONS: document.querySelectorAll('.locations ul li img'),
+    DELETE_BUTTONS: document.querySelectorAll('.locations ul li img'),
     LIKE_BUTTON: document.querySelector('.like img'),
     BOOKMARKS: document.querySelectorAll('.favorites-city span'),
 }
@@ -41,8 +41,8 @@ function deleteFavoriteCity() {
     FAVORITES_CITIES.splice(FAVORITES_CITIES.indexOf(this.previousElementSibling.textContent), 1);
 }
 
-UI.CLOSE_BUTTONS.forEach(function (item) {
-    item.addEventListener('click', deleteFavoriteCity);
+UI.DELETE_BUTTONS.forEach(function (button) {
+    button.addEventListener('click', deleteFavoriteCity);
 })
 
 UI.LIKE_BUTTON.addEventListener('click', function () {
@@ -61,6 +61,6 @@ UI.LIKE_BUTTON.addEventListener('click', function () {
 function bookmarksCityClick() {
     showWeather(this.textContent);
 }
-UI.BOOKMARKS.forEach(function (item) {
-    item.addEventListener('click', bookmarksCityClick);
+UI.BOOKMARKS.forEach(function (city) {
+    city.addEventListener('click', bookmarksCityClick);
 })
