@@ -3,7 +3,6 @@ const UI = {
     input: document.querySelector('input'),
     output: document.querySelector('.output'),
     output2: document.querySelector('.output2')
-
 }
 
 UI.form.addEventListener('submit', function () {

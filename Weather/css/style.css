@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #e5e5e5;
+    font-family:'Roboto', sans-serif;
+}
+
+.container {
+    width: 621px;
+    height: 462px;
+    background-color: white;
+    margin: 200px auto 0;
+    box-sizing: border-box;
+    padding: 14px 9px 13px 12px;
+}
+
+.border {
+    width: 600px;
+    height: 435px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---------------------------------------------------------------------- */
+.input-block {
+    position: relative;
+}
+
+.input-block input {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px black solid;
+    padding: 11px 17px 13px 16px; 
+    box-sizing: border-box;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.input-block input:focus {
+    outline: none;
+}
+
+.input-block button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    position: absolute;
+    top: 7px;
+    right: 10px;
+}
+/* ---------------------------------------------------------------------- */
+.interactive {
+    width: 297px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+
+
+.interactive .slide {
+    display: none;
+}
+
+.interactive .current {
+    display: flex;
+    flex-direction: column;
+    height: 344px;
+    overflow: auto; 
+}
+/* ------------------------------------slide1------------------------------------*/
+.interactive .slide .temperature {
+    font-size: 70px;
+    line-height: 82px;
+    margin: 20px 23px 40px;
+}
+.interactive .slide .icon {
+    margin-left: 112px;
+    margin-bottom: 98px;
+}
+.interactive .slide .like{
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    line-height: 28px;
+    padding: 0 26px 0 12px;
+}
+.interactive .slide .like img {
+    cursor: pointer;
+}
+/* ------------------------------------slide2------------------------------------*/
+.interactive .slide .info {
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+    line-height: 28px;
+}
+.interactive .slide .city  {
+    margin: 33px 17px 42px;
+}
+.interactive .slide ul {
+    list-style: none;
+}
+.interactive .slide ul li {
+    margin-bottom: 15px;
+    padding-left: 17px;
+}
+
+
+/* ------------------------------------slide3------------------------------------*/
+
+.city-name {
+    margin: 33px 18px 7px;
+    font-size: 24px;
+    line-height: 28px;
+}
+.item {
+    width: 250px;
+    height: 120px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    margin-left: 18px;
+    margin-bottom: 9px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    font-size: 18px;
+    line-height: 21px;
+    position: relative;
+    padding: 6px 10px 9px;
+}
+.item .date {
+    position: absolute;
+    top: 6px;
+    left: 10px;
+}
+
+.item .time {
+    position: absolute;
+    top: 6px;
+    right: 9px;
+}
+
+.item .temperature-indicators {
+    position: absolute;
+    bottom: 9px;
+    left: 10px;
+}
+
+.item .weather-condition {
+    max-width: 60px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 9px ;
+    right: 10px;
+}
+
+/* ---------------------------------------------------------------------- */
+
+.interactive .slider-controls {
+    width: 297px;
+    border-top: 1px solid black;
+    
+    position: absolute; 
+    bottom: 0;
+
+    display: flex;
+    justify-content: space-between;
+}
+.interactive .slider-controls .button {
+    padding: 12px 0;
+    border-right: 1px solid black;
+    flex-grow: 1;
+    text-align:center;
+    cursor: pointer;
+}
+.interactive .slider-controls .button:last-child {
+    border-right: none;
+}
+
+.active {
+    background-color: black;
+    color: white;
+}
+
+
+
+/* ---------------------------------------------------------------------- */
+
+.main-block {
+display: flex;
+justify-content: space-between;
+height: 100%;
+}
+
+.locations {
+    border-left: 1px solid black;
+    width: 302px;
+    box-sizing: border-box;
+    
+    display: flex;
+    flex-direction: column;
+}
+.locations .heading-block {
+    border-bottom: 1px black solid;
+    padding: 33px 18px 7px;
+}
+.locations .list-block {
+    padding: 35px 18px 0;
+    overflow: auto;
+    height: 315px;
+    box-sizing: border-box;
+}
+
+.locations h2 {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+
+}
+.locations .favorites {
+    list-style: none;
+    font-size: 24px;
+    line-height: 28px;
+
+}
+.locations .favorites li{
+    margin-bottom: 15px;
+    position: relative;
+}
+.locations .favorites li span {
+    cursor: pointer;
+}
+.locations .favorites li img{
+position: absolute;
+bottom: 3px;
+right:5px;
+cursor: pointer;
+}

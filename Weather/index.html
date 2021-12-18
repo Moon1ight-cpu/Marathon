@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="border">
+
+            <div class="input-block">
+                <form onsubmit="return false">
+                    <input type="text" placeholder="Aktobe">
+                    <button type="submit"><img src="img/search.png"></button>
+                </form>
+            </div>
+
+            <div class="main-block">
+                <div class="interactive">
+
+                    <div class="slide current">
+                        <span class="temperature">14°</span>
+                        <img class='icon' src="img/icons8-cloud-96 1.png" width="78px" height="59px">
+                        <div class="like">
+                            <span>Aktobe</span>
+                            <img src="img/Shape.png" width="22px" height="22px">
+                        </div>
+                    </div>
+
+
+                    <!-- <div class="slide">
+                        <div class="info">
+                            <span class="city">Aktobe</span>
+                            <ul>
+                                <li>Temperature: 14°</li>
+                                <li>Feels like: 10°</li>
+                                <li>Weather: Clouds</li>
+                                <li>Sunrise: 03:21</li>
+                                <li>Sunset: 18:54</li>
+                            </ul>
+                        </div>
+                    </div> -->
+
+                    <!-- <div class="slide">
+                        <span class='city-name'>Aktobe</span>
+                        <div class="item">
+                            <span class="date">17 May</span>
+                            <span class="time">12:00</span>
+                            <span class="temperature-indicators">
+                                Temperature: 13° <br>
+                                Feels like: 10°
+                            </span>
+                            <div class="weather-condition">
+                                <span class="condition">Rain</span>
+                                <img src="img/icons8-rain-96 1.png" width="31px" height="31px">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <span class="date">17 May</span>
+                            <span class="time">15:00</span>
+                            <span class="temperature-indicators">
+                                Temperature: 13° <br>
+                                Feels like: 10°
+                            </span>
+                            <div class="weather-condition">
+                                <span class="condition">Rain</span>
+                                <img src="img/icons8-rain-96 1.png" width="31px" height="31px">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <span class="date">17 May</span>
+                            <span class="time">18:00</span>
+                            <span class="temperature-indicators">
+                                Temperature: 13° <br>
+                                Feels like: 10°
+                            </span>
+                            <div class="weather-condition">
+                                <span class="condition">Rain</span>
+                                <img src="img/icons8-rain-96 1.png" width="31px" height="31px">
+                            </div>
+                        </div>
+                    </div> -->
+
+
+
+
+                    <div class="slider-controls">
+                        <div class="button active">Now</div>
+                        <div class="button">Details</div>
+                        <div class="button">Forecast</div>
+                    </div>
+
+                </div>
+
+
+
+                <div class="locations">
+                    <div class="heading-block">
+                        <h2>Added Locations:</h2>
+                    </div>
+                    <div class="list-block">
+                        <ul class="favorites">
+                            <li class="favorites-city">
+                                <span>Amur</span>
+                                <img src="img/close_thick_icon_137749.svg" width="20px" height="20px">
+                            </li>
+                            <li class="favorites-city">
+                                <span>Samara</span>
+                                <img src="img/close_thick_icon_137749.svg" width="20px" height="20px">
+                            </li>
+                            <li class="favorites-city">
+                                <span>Bali</span>
+                                <img src="img/close_thick_icon_137749.svg" width="20px" height="20px">
+                            </li>
+                            <li class="favorites-city">
+                                <span>Dane</span>
+                                <img src="img/close_thick_icon_137749.svg" width="20px" height="20px">
+                            </li>
+                            <li class="favorites-city">
+                                <span>Kilo</span>
+                                <img src="img/close_thick_icon_137749.svg" width="20px" height="20px">
+                            </li>
+                            <li class="favorites-city">
+                                <span>Nur-Sultan</span>
+                                <img src="img/close_thick_icon_137749.svg" width="20px" height="20px">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
